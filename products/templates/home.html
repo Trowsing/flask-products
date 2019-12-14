@@ -1,0 +1,53 @@
+<h1 id="flaskproducts">Flask Products</h1>
+
+<p>Implementation of a GET API to list products stored in a TinyDB database.</p>
+
+<h2 id="availableendpoints">Available endpoints</h2>
+
+<hr />
+
+<p><code>GET</code> <em>/products/</em> </p>
+
+<p>Returns a list of all products.</p>
+
+<p><code>curl http://localhost:5000/products</code></p>
+
+<hr />
+
+<p><code>GET</code> <em>/products/&lt;id&gt;</em></p>
+
+<p>Returns a list of products matching the ID parameter.</p>
+
+<p><code>curl http://localhost:5000/products/1</code></p>
+
+<hr />
+
+<p><code>GET</code> <em>/products/filter?&lt;name&gt;</em></p>
+
+<p>Returns a list of products matching the search keywords.</p>
+
+<ul>
+<li><code>name</code> (str): product name search query </li>
+</ul>
+
+<p><code>curl http://localhost:5000/products/filter?name=kingston</code></p>
+
+<hr />
+
+<p><code>GET</code> <em>/products/filter/price?&lt;min&gt;&amp;&lt;max&gt;</em></p>
+
+<p>Returns a list of products in a price range.</p>
+
+<ul>
+<li><code>min</code> (int): minumum desired price</li>
+
+<li><code>max</code> (int): maximum desired value</li>
+</ul>
+
+<p><code>curl http://localhost:5000/products/filter/price?min=150&amp;max=500</code></p>
+
+<p><code>curl http://localhost:5000/products/filter/price?min=150</code></p>
+
+<p><code>curl http://localhost:5000/products/filter/price?max=800</code></p>
+
+<hr />

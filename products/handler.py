@@ -1,4 +1,5 @@
-from flask import Flask
+from flask import Flask, render_template
+from flask.views import MethodView
 from flask_restful import reqparse, abort, Api, Resource
 from services import Filters
 
@@ -12,6 +13,12 @@ parser = reqparse.RequestParser()
 parser.add_argument("name", type=str)
 parser.add_argument("min", type=int)
 parser.add_argument("max", type=int)
+
+
+class HomePage(MethodView):
+    def get(self):
+        """Get the redered home page file"""
+        return render_template("home.html")
 
 
 class Product(Resource):
@@ -80,6 +87,7 @@ api.add_resource(ProductPriceFilter, "/products/filter/price")
 api.add_resource(ProductNameFilter, "/products/filter")
 api.add_resource(ProductsList, "/products")
 api.add_resource(Product, "/products/<int:product_id>")
+app.add_url_rule("/", view_func=HomePage.as_view("home"))
 
 
 if __name__ == "__main__":
