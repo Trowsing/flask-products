@@ -22,6 +22,14 @@ pipenv install
 pipenv shell
 ```
 
+## Testing and running
+
+Run all unit tests with `pytest`:
+
+```bash
+python -m pytest products/tests/
+```
+
 Run the development server:
 
 ```bash
