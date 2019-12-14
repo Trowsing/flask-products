@@ -32,6 +32,12 @@ export FLASK_APP=products/handler.py
 flask run
 ```
 
+Or run the `gunicorn` server:
+
+```bash
+gunicorn --chdir products/ handler:app
+```
+
 ## Available endpoints
 
 ---

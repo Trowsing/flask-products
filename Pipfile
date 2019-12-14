@@ -12,6 +12,7 @@ rope = "*"
 [packages]
 tinydb = "*"
 flask-restful = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6"

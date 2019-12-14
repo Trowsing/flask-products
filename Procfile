@@ -1,0 +1,1 @@
+web: gunicorn --chdir products/ handler:app
