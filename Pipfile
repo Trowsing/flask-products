@@ -13,7 +13,7 @@ rope = "*"
 tinydb = "~=4.8.0"
 flask = "~=2.2.5"
 flask-restful = "~=0.3.9"
-gunicorn = "~=21.2.0"
+gunicorn = "~=23.0.0"
 
 [requires]
 python_version = "3.10"
